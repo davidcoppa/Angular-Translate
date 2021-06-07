@@ -1,0 +1,6 @@
+{
+    "SPANISH": "Español",
+    "TITTLE": "English Translation",
+    "DESCRIPTION": "This is an example about translation, using ngx-translate. this is a value from the server: {{serverValue}}",
+    "OTHERTEXT": "If you want to learn more, higly recomend this page: <a target=\"_blank\" href=\"https://www.positronx.io/angular-internationalization-i18n-with-ngx-translate-tutorial\">Web</a>"
+}

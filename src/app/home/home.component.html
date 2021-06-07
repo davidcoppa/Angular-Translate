@@ -1,0 +1,24 @@
+<div class="no-wrap">
+    <a [hidden]="language=='en'" href="#" (click)="switchLang('en')">
+      {{'ENGLISH'|translate}}
+    </a>
+    <a [hidden]="language=='es'" href="#" (click)="switchLang('es')">
+      {{'SPANISH'|translate}}
+    </a>
+
+</div>
+<div class="container">
+    <div class="row Ama titleBig">
+        <div class="col-md-12">
+            <h1>{{'TITTLE'|translate}}</h1>
+        </div>
+    </div>
+
+    <div class="row team">
+
+        <h3>{{ 'DESCRIPTION' | translate:{'serverValue':value} }}</h3>
+
+        <p [innerHTML]="'OTHERTEXT'| translate"></p>
+    </div>
+
+</div>
