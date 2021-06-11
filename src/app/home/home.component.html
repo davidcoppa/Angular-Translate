@@ -1,24 +1,30 @@
-<div class="no-wrap">
-    <a [hidden]="language=='en'" href="#" (click)="switchLang('en')">
+<div class="container">
+
+    <div class="container">
+        <div class="row col-xs-12">
+            <div class="col-md-12 center">
+                <h1>{{'TITTLE'|translate}}</h1>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row col-xs-12 ">
+
+            <h3>{{ 'DESCRIPTION' | translate:{'serverValue':value} }}</h3>
+            <p class="text-right" [innerHTML]="'OTHERTEXT'| translate"></p>
+
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="pull-left">
+        <a class="btn btn-success" [hidden]="language=='en'" href="#" (click)="switchLang('en')">
       {{'ENGLISH'|translate}}
     </a>
-    <a [hidden]="language=='es'" href="#" (click)="switchLang('es')">
+        <a class="btn btn-success" [hidden]="language=='es'" href="#" (click)="switchLang('es')">
       {{'SPANISH'|translate}}
     </a>
 
-</div>
-<div class="container">
-    <div class="row Ama titleBig">
-        <div class="col-md-12">
-            <h1>{{'TITTLE'|translate}}</h1>
-        </div>
     </div>
-
-    <div class="row team">
-
-        <h3>{{ 'DESCRIPTION' | translate:{'serverValue':value} }}</h3>
-
-        <p [innerHTML]="'OTHERTEXT'| translate"></p>
-    </div>
-
 </div>

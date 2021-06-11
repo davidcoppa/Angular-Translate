@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule} from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HttpClient, HttpClientModule} from '@angular/common/http';
         deps: [HttpClient]
       }
     }),
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
