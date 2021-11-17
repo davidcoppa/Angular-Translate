@@ -7,12 +7,31 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent  {
-  language='en';
+
   value='Have a good day!!';
 
+  language = this.translate.getDefaultLang();
   constructor(public translate: TranslateService) {
     translate.addLangs(['en', 'es']);
-    translate.setDefaultLang('en');
+
+
+    var lng = translate.getBrowserLang();
+  //  console.log(lng);
+    if (lng != undefined) {
+      if (lng == 'es' || lng == 'en') {
+        translate.setDefaultLang(lng);
+      } else {
+        translate.setDefaultLang('en');
+
+      }
+    } else {
+      translate.setDefaultLang('en');
+
+    }
+
+
+
+
    }
 
 
@@ -22,7 +41,7 @@ export class HomeComponent  {
     this.language=lang;
 
   }
- 
-  
+
+
 
 }
